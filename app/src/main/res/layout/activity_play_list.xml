@@ -3,33 +3,56 @@
     android:layout_height="match_parent"
     android:background="@drawable/playlist"
     android:layout_width="match_parent">
-
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="The Music Player App"
+       android:textColor="@color/black"
+       android:textStyle="bold"
+       android:textSize="32dp"
+       android:textAlignment="center"
+       android:fontFamily="@font/college"
+       android:background="@drawable/textview"
+       android:layout_marginTop="50dp"/>
     <Button
         android:id="@+id/Hindi"
         android:layout_marginTop="270dp"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/textview"
         android:text="Hindi" />
 
     <Button
+        android:id="@+id/english"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="English"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/textview"
         android:layout_marginTop="330dp"/>
     <Button
+        android:id="@+id/punjabi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Punjabi"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/textview"
         android:layout_marginTop="390dp" />
 
     <Button
+        android:id="@+id/romantic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="450dp"
+        android:background="@drawable/textview"
         android:text="Romantic" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginTop="650dp"/>
 
 </RelativeLayout>
