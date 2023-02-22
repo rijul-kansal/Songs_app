@@ -11,7 +11,7 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/textview"
         android:fontFamily="@font/college"
         android:text="The Music Player App"
@@ -20,6 +20,7 @@
         android:textSize="32dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,71 +28,55 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginBottom="13dp"
         android:src="@drawable/nashese"
+        app:layout_constraintBottom_toTopOf="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="28dp"
         android:text="Title"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="32dp"
+        android:textSize="22dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/total"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="36dp"
-        android:text="Total Dur"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="32dp"
-        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/current"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/current"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="27dp"
         android:text="Current"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="32dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/title"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="254dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/total" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="2dp"
         android:background="@drawable/play"
-        app:layout_constraintEnd_toStartOf="@+id/stop"
         app:layout_constraintStart_toEndOf="@+id/backward"
         app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
@@ -99,10 +84,8 @@
         android:id="@+id/stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="3dp"
         android:background="@drawable/stop"
         app:layout_constraintBaseline_toBaselineOf="@+id/play"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toEndOf="@+id/play" />
 
     <Button
@@ -112,18 +95,25 @@
         android:layout_marginStart="5dp"
         android:background="@drawable/back_10sec"
         app:layout_constraintBaseline_toBaselineOf="@+id/play"
-        app:layout_constraintEnd_toStartOf="@+id/play"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/forward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="19dp"
         android:background="@drawable/forward_10sec"
         app:layout_constraintBaseline_toBaselineOf="@+id/stop"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/stop" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginBottom="16dp"
+        android:text="Change"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
